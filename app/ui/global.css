@@ -2,17 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-input[type='number'] {
-  -moz-appearance: textfield;
-  appearance: textfield;
+/* Ensure dashboard takes full height */
+html, body {
+  height: 100%;
 }
 
-input[type='number']::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 
-input[type='number']::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+@media (min-width: 768px) {
+  .dashboard-container {
+    flex-direction: row;
+  }
 }
